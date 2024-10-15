@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up and Register</title>
+    <link rel="stylesheet" href="login_signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Custom UI Tweaks */
+        body {
+            background: linear-gradient(to right, rgb(243, 12, 12), rgb(243, 12, 12));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .container {
+            border-radius: 20px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input {
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            padding: 12px;
+            margin: 10px 0;
+            width: 100%;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            border-color: rgb(243, 12, 12);
+            outline: none;
+        }
+
+        button {
+            background-color: rgb(243, 12, 12);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: rgb(243, 12, 12);
+        }
+
+        .overlay-panel {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .overlay h1 {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .overlay p {
+            font-size: 1rem;
+            color: white;
+        }
+
+        .ghost {
+            background-color: transparent;
+            border: 2px solid white;
+        }
+
+        .social-container a {
+            border-radius: 50%;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 0 5px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .social-container a:hover {
+            color: rgb(243, 12, 12);
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form>
+                <h1>Create Account</h1>
+                <input type="text" name="name" id="nameSU" placeholder="Name">
+                <input type="email" name="email" id="emailSU" placeholder="Email">
+                <input type="password" name="password" id="passwordSU" placeholder="Password">
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Sign In</h1>
+                <input type="email" name="email" id="emailSI" placeholder="Email">
+                <input type="password" name="password" id="passwordSI" placeholder="Password">
+                <a href="#">Forgot Your Password?</a>
+                <button type="login">Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <img src="logoabout.png" alt="Melody Logo" height="200px" width="200px">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected, please log in with your personal info.</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <img src="logoabout.png" alt="Melody Logo" height="200px" width="200px">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details to begin your journey with us.</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <script type="text/javascript">
+        const signUpButton = document.getElementById('signUp');
+        const signInButton = document.getElementById('signIn');
+        const container = document.getElementById('container');
+
+        signUpButton.addEventListener('click', () => {
+            container.classList.add("right-panel-active");
+        });
+        signInButton.addEventListener('click', () => {
+            container.classList.remove("right-panel-active");
+        });
+    </script>
+</body>
+</html>

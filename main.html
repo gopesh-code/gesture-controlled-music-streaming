@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vibey - Control the Music!</title>
+        <link rel="stylesheet" href="main.css">
+        </head>
+<body>
+    <div>
+        <nav>
+            <ul>
+                <div class="logo">
+                    <img src="logomain.png">
+                </div>
+                <li><a href="about.html" title="About Vibey">About</a></li>
+				<li><a href="index.html" title="Login/Create an account">Sign In / Register</a></li>
+				<div id="updatenote" class="updatenote mt10" > Loading Model...</div>
+				<li><button  id="trackbutton" class="bx--btn bx--btn--secondary mt10 trackbutton" type="button" disabled>
+                Toggle Video Control
+				</button></li>
+				
+				<video class="videobox canvasbox" autoplay id="myvideo"></video>
+				<canvas id="canvas" class="border canvasbox"></canvas>
+                
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="container">
+        <div class="songList">
+            <h1>Your Playlist</h1>
+            <div class="songItemContainer">
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Blinding Lights</span>
+                    <span class="songlistplay"><span class="timestamp">3:23 <i id="0" class="far songItemPlay"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Huma</span>
+                    <span class="songlistplay"><span class="timestamp">2:33 <i id="1" class="far songItemPlay"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">The Perfect Girl</span>
+                    <span class="songlistplay"><span class="timestamp">3:15 <i id="2" class="far songItemPlay"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">After Dark</span>
+                    <span class="songlistplay"><span class="timestamp">4:14 <i id="3" class="far songItemPlay"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Heroes Tonight</span>
+                    <span class="songlistplay"><span class="timestamp">3:28 <i id="4" class="far songItemPlay"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">As it was</span>
+                    <span class="songlistplay"><span class="timestamp">2:40 <i id="5" class="far songItemPlay"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Little Dark Age</span>
+                    <span class="songlistplay"><span class="timestamp">5:00 <i id="6" class="far songItemPlay"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Mortals</span>
+                    <span class="songlistplay"><span class="timestamp">3:50 <i id="7" class="far songItemPlay"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Dancin</span>
+                    <span class="songlistplay"><span class="timestamp">4:05 <i id="8" class="far songItemPlay"></i> </span></span>
+                </div>
+                <div class="songItem">
+                    <img alt="1">
+                    <span class="songName">Enemy</span>
+                    <span class="songlistplay"><span class="timestamp">2:50 <i id="9" class="far songItemPlay"></i> </span></span>
+                </div>
+            </div>
+        </div>
+        <div class="songBanner"></div>
+    </div>    
+
+    <div class="bottom">
+        <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
+        <div class="icons">
+            <i class="fas fa-3x fa-step-backward" id="previous"></i>
+            <i class="far fa-3x fa-play-circle" id="masterPlay"></i>
+            <i class="fas fa-3x fa-step-forward" id="next"></i> 
+        </div>
+        <div class="songInfo">
+            <img src="playing.gif" width="42px" alt="" id="gif"> <span id="masterSongName">Blinding Lights - The Weeknd</span>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/26504e4a1f.js" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/planck-js/0.1.44/planck-with-testbed.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handtrackjs@latest/dist/handtrack.min.js"> </script>
+	<script src="handgesture.js"></script>
+</body>
+</html>	
