@@ -1,10 +1,10 @@
 const firebaseConfig = {
-	apiKey: "AIzaSyBRAQ5m5ixVOFGRpHyOGovApBUYk7tPowk",
-	authDomain: "iwpproject-b4c68.firebaseapp.com",
-	projectId: "iwpproject-b4c68",
-	storageBucket: "iwpproject-b4c68.appspot.com",
-	messagingSenderId: "646628849069",
-	appId: "1:646628849069:web:807b400f9a6eed7f0fdd24"
+	apiKey: "",
+	authDomain: "",
+	projectId: "",
+	storageBucket: "",
+	messagingSenderId: "",
+	appId: ""
 };
 const app = firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
